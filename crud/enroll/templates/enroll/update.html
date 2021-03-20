@@ -1,0 +1,22 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+<div class="row">
+<div class="col-sm-6 offset-2 mx-auto">
+<h4 class="alert alert-warning text-center">Update Details</h4>
+{% if a %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Data Updated!!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+<form action="" method="post">
+{% csrf_token %}
+{{fm.as_p}}
+<input type="submit" value="Update" class="btn btn-success">
+<a href="{% url 'add' %}" class="btn btn-primary">Home</a>
+</form>
+</div>
+</div>
+{% endblock content %}
