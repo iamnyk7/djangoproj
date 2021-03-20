@@ -1,0 +1,1 @@
+<h1>Simple Django CRUD project</h1>
